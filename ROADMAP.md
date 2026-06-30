@@ -1,31 +1,31 @@
 # Roadmap - Gold Price Forecast
 
-## Sprint 1 (Días 1-3): Base de datos y preprocesamiento
+## Sprint 1 (Days 1-3): Data & Preprocessing
 
-| Milestone | Asignado |
-|-----------|----------|
-| EDA completo: nulos, estadísticos, visualizaciones, correlaciones | José |
-| Preprocesamiento: limpieza, escalado, encoding, train/test split, pipeline | Gema |
-| EDA visual para presentación | María |
-| Dataset descargado y repo operativo | Juan (SM) |
+| Milestone | Assigned to |
+|-----------|-------------|
+| Full EDA: nulls, statistics, visualizations, correlations | José |
+| Preprocessing: cleaning, scaling, encoding, train/test split, pipeline | Gema |
+| Visual EDA for presentation | María |
+| Dataset downloaded and repo operational | Juan (SM) |
 
-**Entregable**: Notebooks `01_eda.ipynb` y `02_preprocessing.ipynb` funcionales
+**Deliverable**: Notebooks `01_eda.ipynb` and `02_preprocessing.ipynb` working
 
-## Sprint 2 (Días 4-6): Modelado
+## Sprint 2 (Days 4-6): Modeling
 
-| Milestone | Asignado |
-|-----------|----------|
-| Modelo de clasificación: baseline + Random Forest | Juan |
-| Modelo de regresión: baseline + Random Forest | Joel |
+| Milestone | Assigned to |
+|-----------|-------------|
+| Classification model: baseline + Random Forest | Juan |
+| Regression model: baseline + Random Forest | Joel |
 
-**Entregable**: Notebooks `03_classification.ipynb` y `04_regression.ipynb` con modelos entrenados y métricas
+**Deliverable**: Notebooks `03_classification.ipynb` and `04_regression.ipynb` with trained models and metrics
 
-## Sprint 3 (Días 7-8): Evaluación y cierre
+## Sprint 3 (Days 7-8): Evaluation & Closing
 
-| Milestone | Asignado |
-|-----------|----------|
-| Evaluación comparativa, detección de overfitting, análisis crítico | Joel |
-| Presentación slides con narrativa de negocio | María (líder) + todos |
-| README final, decision_log y cierre del repo | Juan (SM) |
+| Milestone | Assigned to |
+|-----------|-------------|
+| Comparative evaluation, overfitting detection, critical analysis | Joel |
+| Slides presentation with business narrative | María (lead) + all |
+| Final README, decision_log and repo closure | Juan (SM) |
 
-**Entregable final**: Notebook `05_evaluation.ipynb`, presentación, repo completo
+**Final deliverable**: Notebook `05_evaluation.ipynb`, presentation, complete repo

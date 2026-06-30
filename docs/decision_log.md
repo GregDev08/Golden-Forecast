@@ -1,6 +1,6 @@
 # Decision Log
 
-| Fecha | Decisión | Justificación |
+| Date | Decision | Justification |
 |-------|----------|---------------|
 | 29/06/2026 | Selección de dataset: GLD (Gold ETF) por Yahoo Finance | Datos públicos, históricos suficientes (2010-actualidad), volumen y precio disponibles |
 | 30/06/2026 | María designada Product Owner | Responsable de visión de negocio y validación |
