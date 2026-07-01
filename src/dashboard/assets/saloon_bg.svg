@@ -1,0 +1,480 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#120700"/>
+      <stop offset="50%" stop-color="#1A0D04"/>
+      <stop offset="100%" stop-color="#0D0602"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2C1608"/>
+      <stop offset="40%" stop-color="#1A0D04"/>
+      <stop offset="100%" stop-color="#0D0602"/>
+    </linearGradient>
+    <linearGradient id="columnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2C1608"/>
+      <stop offset="25%" stop-color="#5A3315"/>
+      <stop offset="50%" stop-color="#3D1F0D"/>
+      <stop offset="75%" stop-color="#5A3315"/>
+      <stop offset="100%" stop-color="#2C1608"/>
+    </linearGradient>
+    <linearGradient id="brassGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="40%" stop-color="#B8860B"/>
+      <stop offset="100%" stop-color="#5A3315"/>
+    </linearGradient>
+    <linearGradient id="goldShine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFB300"/>
+      <stop offset="40%" stop-color="#E5A000"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+    <linearGradient id="sunsetGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8B5A2B"/>
+      <stop offset="30%" stop-color="#5A3315"/>
+      <stop offset="100%" stop-color="#2C1608"/>
+    </linearGradient>
+    <linearGradient id="desertGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5A3315"/>
+      <stop offset="100%" stop-color="#2C1608"/>
+    </linearGradient>
+    <radialGradient id="lightGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.06"/>
+      <stop offset="60%" stop-color="#FFB300" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#FFB300" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFB300" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#E5A000" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFB300" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lampGlowStrong" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFB300" stop-opacity="0.5"/>
+      <stop offset="40%" stop-color="#E5A000" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FFB300" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="centerGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFB300" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#FFB300" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="bloom">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="strongBloom">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+
+    <symbol id="coin" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" fill="url(#goldShine)"/>
+      <circle cx="12" cy="12" r="7" fill="none" stroke="#8B5A2B" stroke-width="0.5" opacity="0.6"/>
+      <text x="12" y="15" text-anchor="middle" fill="#5A3315" font-size="8" font-weight="bold" font-family="serif">$</text>
+    </symbol>
+    <symbol id="bulb" viewBox="0 0 14 14">
+      <circle cx="7" cy="7" r="5" fill="#D4AF37" opacity="0.6"/>
+      <circle cx="6" cy="5.5" r="2" fill="#FFF8DC" opacity="0.3"/>
+    </symbol>
+    <symbol id="dust" viewBox="0 0 4 4">
+      <circle cx="2" cy="2" r="1.5" fill="#D4AF37" opacity="0.2"/>
+    </symbol>
+    <symbol id="spark" viewBox="0 0 6 6">
+      <path d="M3 0 L4 2 L6 3 L4 4 L3 6 L2 4 L0 3 L2 2 Z" fill="#FFB300" opacity="0.3"/>
+    </symbol>
+    <symbol id="goldBar" viewBox="0 0 40 20">
+      <rect x="0" y="0" width="40" height="16" rx="3" fill="url(#brassGrad)" stroke="#8B5A2B" stroke-width="0.5"/>
+      <rect x="3" y="2" width="34" height="12" rx="2" fill="url(#goldShine)"/>
+      <rect x="8" y="5" width="24" height="6" rx="1" fill="none" stroke="#8B5A2B" stroke-width="0.3"/>
+    </symbol>
+
+    <style>
+      @keyframes floatCoin {
+        0%{transform:translateY(-40px) rotate(0deg);opacity:0}
+        10%{opacity:0.4}
+        85%{opacity:0.3}
+        100%{transform:translateY(1050px) rotate(120deg);opacity:0}
+      }
+      @keyframes floatCoin2 {
+        0%{transform:translateY(-80px) rotate(0deg);opacity:0}
+        10%{opacity:0.35}
+        85%{opacity:0.25}
+        100%{transform:translateY(1080px) rotate(-90deg);opacity:0}
+      }
+      @keyframes dustDrift {
+        0%{transform:translate(0,0);opacity:0}
+        20%{opacity:0.25}
+        80%{opacity:0.1}
+        100%{transform:translate(60px,-100px);opacity:0}
+      }
+      @keyframes dustDrift2 {
+        0%{transform:translate(0,0);opacity:0}
+        20%{opacity:0.2}
+        80%{opacity:0.08}
+        100%{transform:translate(-50px,-80px);opacity:0}
+      }
+      @keyframes sparkDrift {
+        0%{transform:translate(0,0) scale(1);opacity:0}
+        15%{opacity:0.35}
+        85%{opacity:0.15}
+        100%{transform:translate(40px,-120px) scale(0.5);opacity:0}
+      }
+      @keyframes glowPulse {
+        0%,100%{opacity:0.5}
+        50%{opacity:0.8}
+      }
+      @keyframes glowPulse2 {
+        0%,100%{opacity:0.4}
+        50%{opacity:0.7}
+      }
+      @keyframes lampFlicker {
+        0%,100%{opacity:0.7}
+        25%{opacity:0.6}
+        50%{opacity:0.8}
+        75%{opacity:0.55}
+      }
+      .coin1{animation:floatCoin 22s ease-in-out infinite}
+      .coin2{animation:floatCoin2 26s ease-in-out infinite}
+      .coin3{animation:floatCoin 18s ease-in-out infinite}
+      .dust1{animation:dustDrift 18s ease-out infinite}
+      .dust2{animation:dustDrift2 22s ease-out infinite}
+      .spark1{animation:sparkDrift 14s ease-out infinite}
+      .glow1{animation:glowPulse 4s ease-in-out infinite}
+      .glow2{animation:glowPulse2 6s ease-in-out infinite}
+      .lamp{animation:lampFlicker 3s ease-in-out infinite}
+    </style>
+  </defs>
+
+  <!-- BACKGROUND -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  <rect width="1920" height="1080" fill="url(#lightGlow)"/>
+
+  <!-- SUBTLE CENTER GRADIENT (keeps center clean but warm) -->
+  <ellipse cx="960" cy="540" rx="680" ry="400" fill="url(#centerGlow)"/>
+
+  <!-- FLOOR -->
+  <rect x="0" y="780" width="1920" height="300" fill="url(#floorGrad)"/>
+  <line x1="0" y1="820" x2="1920" y2="820" stroke="#2C1608" stroke-width="0.5" opacity="0.2"/>
+  <line x1="0" y1="870" x2="1920" y2="870" stroke="#2C1608" stroke-width="0.5" opacity="0.15"/>
+  <line x1="0" y1="920" x2="1920" y2="920" stroke="#2C1608" stroke-width="0.5" opacity="0.12"/>
+  <line x1="0" y1="970" x2="1920" y2="970" stroke="#2C1608" stroke-width="0.5" opacity="0.1"/>
+  <line x1="0" y1="1020" x2="1920" y2="1020" stroke="#2C1608" stroke-width="0.5" opacity="0.08"/>
+
+  <!-- OUTER BORDER FRAME -->
+  <rect x="12" y="12" width="1896" height="1056" rx="6" fill="none" stroke="#5A3315" stroke-width="2" opacity="0.7"/>
+  <rect x="18" y="18" width="1884" height="1044" rx="4" fill="none" stroke="#8B5A2B" stroke-width="0.8" opacity="0.4"/>
+  <rect x="22" y="22" width="1876" height="1036" rx="3" fill="none" stroke="#D4AF37" stroke-width="0.3" opacity="0.25"/>
+
+  <!-- ==================== TOP FRAME ==================== -->
+  <rect x="50" y="25" width="1820" height="40" rx="4" fill="url(#bgGrad)" opacity="0.85" stroke="#8B5A2B" stroke-width="0.8"/>
+
+  <g opacity="0.35">
+    <path d="M100 35 Q200 48 300 35 Q400 48 500 35 Q600 48 700 35 Q800 48 900 35 Q960 43 1020 35 Q1100 48 1200 35 Q1300 48 1400 35 Q1500 48 1600 35 Q1700 48 1800 35" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+    <path d="M100 42 Q200 53 300 42 Q400 53 500 42 Q600 53 700 42 Q800 53 900 42 Q960 49 1020 42 Q1100 53 1200 42 Q1300 53 1400 42 Q1500 53 1600 42 Q1700 53 1800 42" fill="none" stroke="#D4AF37" stroke-width="0.4"/>
+  </g>
+
+  <!-- TOP MARQUEE BULBS (reduced to 16) -->
+  <g>
+    <use href="#bulb" x="460" y="22" width="12" height="12" class="glow1"/>
+    <use href="#bulb" x="520" y="22" width="12" height="12" class="glow2"/>
+    <use href="#bulb" x="580" y="22" width="12" height="12" class="glow1"/>
+    <use href="#bulb" x="640" y="22" width="12" height="12" class="glow2"/>
+    <use href="#bulb" x="700" y="22" width="12" height="12" class="glow1"/>
+    <use href="#bulb" x="760" y="22" width="12" height="12" class="glow2"/>
+    <use href="#bulb" x="820" y="22" width="12" height="12" class="glow1"/>
+    <use href="#bulb" x="880" y="22" width="12" height="12" class="glow2"/>
+    <use href="#bulb" x="940" y="22" width="12" height="12" class="glow1"/>
+    <use href="#bulb" x="1000" y="22" width="12" height="12" class="glow2"/>
+    <use href="#bulb" x="1060" y="22" width="12" height="12" class="glow1"/>
+    <use href="#bulb" x="1120" y="22" width="12" height="12" class="glow2"/>
+    <use href="#bulb" x="1180" y="22" width="12" height="12" class="glow1"/>
+    <use href="#bulb" x="1240" y="22" width="12" height="12" class="glow2"/>
+    <use href="#bulb" x="1300" y="22" width="12" height="12" class="glow1"/>
+    <use href="#bulb" x="1360" y="22" width="12" height="12" class="glow2"/>
+  </g>
+
+  <!-- BOTTOM FRAME -->
+  <rect x="50" y="1015" width="1820" height="30" rx="4" fill="url(#bgGrad)" opacity="0.7" stroke="#8B5A2B" stroke-width="0.8"/>
+
+  <!-- SIDE COLUMNS -->
+  <rect x="28" y="65" width="20" height="950" rx="3" fill="url(#columnGrad)" opacity="0.75"/>
+  <rect x="1872" y="65" width="20" height="950" rx="3" fill="url(#columnGrad)" opacity="0.75"/>
+
+  <!-- ==================== LEFT: ASSAY OFFICE ==================== -->
+  <g opacity="0.85">
+    <!-- Balcony -->
+    <rect x="55" y="180" width="200" height="8" rx="2" fill="#3D1F0D"/>
+    <rect x="55" y="300" width="200" height="8" rx="2" fill="#3D1F0D"/>
+    <rect x="55" y="188" width="6" height="112" fill="#2C1608"/>
+    <rect x="85" y="188" width="6" height="112" fill="#2C1608"/>
+    <rect x="115" y="188" width="6" height="112" fill="#2C1608"/>
+    <rect x="145" y="188" width="6" height="112" fill="#2C1608"/>
+    <rect x="175" y="188" width="6" height="112" fill="#2C1608"/>
+    <rect x="205" y="188" width="6" height="112" fill="#2C1608"/>
+    <rect x="235" y="188" width="6" height="112" fill="#2C1608"/>
+    <rect x="249" y="180" width="6" height="128" fill="#2C1608"/>
+
+    <!-- Railing -->
+    <line x1="55" y1="195" x2="255" y2="195" stroke="#5A3315" stroke-width="1.2"/>
+    <line x1="55" y1="300" x2="255" y2="300" stroke="#5A3315" stroke-width="1.2"/>
+    <line x1="61" y1="195" x2="61" y2="300" stroke="#5A3315" stroke-width="1"/>
+    <line x1="91" y1="195" x2="91" y2="300" stroke="#5A3315" stroke-width="1"/>
+    <line x1="121" y1="195" x2="121" y2="300" stroke="#5A3315" stroke-width="1"/>
+    <line x1="151" y1="195" x2="151" y2="300" stroke="#5A3315" stroke-width="1"/>
+    <line x1="181" y1="195" x2="181" y2="300" stroke="#5A3315" stroke-width="1"/>
+    <line x1="211" y1="195" x2="211" y2="300" stroke="#5A3315" stroke-width="1"/>
+    <line x1="241" y1="195" x2="241" y2="300" stroke="#5A3315" stroke-width="1"/>
+
+    <!-- ASSAY OFFICE sign -->
+    <rect x="55" y="220" width="200" height="55" rx="6" fill="#120700" stroke="#5A3315" stroke-width="1" filter="url(#softGlow)"/>
+    <rect x="58" y="223" width="194" height="49" rx="4" fill="none" stroke="#8B5A2B" stroke-width="0.4"/>
+    <text x="155" y="247" text-anchor="middle" fill="#D4AF37" font-size="16" font-weight="bold" font-family="serif" letter-spacing="2">ASSAY</text>
+    <text x="155" y="265" text-anchor="middle" fill="#D4AF37" font-size="14" font-weight="bold" font-family="serif" letter-spacing="2">OFFICE</text>
+    <text x="155" y="247" text-anchor="middle" fill="#FFF8DC" font-size="16" font-weight="bold" font-family="serif" letter-spacing="2" opacity="0.12">ASSAY</text>
+    <text x="155" y="265" text-anchor="middle" fill="#FFF8DC" font-size="14" font-weight="bold" font-family="serif" letter-spacing="2" opacity="0.12">OFFICE</text>
+  </g>
+
+  <!-- Strong bloom behind sign -->
+  <rect x="55" y="220" width="200" height="55" rx="6" fill="#FFB300" opacity="0.06" filter="url(#strongBloom)"/>
+
+  <!-- LEFT LANTERNS -->
+  <g transform="translate(75, 315)" class="lamp">
+    <circle cx="0" cy="0" r="25" fill="url(#lampGlowStrong)"/>
+    <rect x="-5" y="-8" width="10" height="16" rx="2" fill="#2C1608" stroke="#5A3315" stroke-width="0.5"/>
+    <rect x="-3" y="-6" width="6" height="12" rx="1" fill="#D4AF37" opacity="0.6"/>
+    <rect x="-1" y="-4" width="2" height="8" rx="1" fill="#FFF8DC" opacity="0.25"/>
+    <circle cx="0" cy="0" r="16" fill="#FFB300" opacity="0.08" filter="url(#bloom)"/>
+  </g>
+  <g transform="translate(230, 315)" class="lamp">
+    <circle cx="0" cy="0" r="25" fill="url(#lampGlowStrong)"/>
+    <rect x="-5" y="-8" width="10" height="16" rx="2" fill="#2C1608" stroke="#5A3315" stroke-width="0.5"/>
+    <rect x="-3" y="-6" width="6" height="12" rx="1" fill="#D4AF37" opacity="0.6"/>
+    <rect x="-1" y="-4" width="2" height="8" rx="1" fill="#FFF8DC" opacity="0.25"/>
+    <circle cx="0" cy="0" r="16" fill="#FFB300" opacity="0.08" filter="url(#bloom)"/>
+  </g>
+
+  <!-- ==================== GOLD SCALE (replaces left slot machine) ==================== -->
+  <g transform="translate(75, 410)" opacity="0.8">
+    <!-- Wooden base -->
+    <rect x="-10" y="55" width="90" height="12" rx="2" fill="#3D1F0D" stroke="#5A3315" stroke-width="0.6"/>
+    <!-- Central column -->
+    <rect x="32" y="10" width="6" height="48" rx="1" fill="url(#brassGrad)" stroke="#5A3315" stroke-width="0.3"/>
+    <!-- Beam -->
+    <rect x="5" y="8" width="60" height="4" rx="1" fill="url(#brassGrad)" stroke="#5A3315" stroke-width="0.3"/>
+    <!-- Left pan -->
+    <path d="M5 12 Q15 52 20 55" fill="none" stroke="url(#brassGrad)" stroke-width="1"/>
+    <ellipse cx="8" cy="55" rx="18" ry="4" fill="url(#brassGrad)" stroke="#5A3315" stroke-width="0.3"/>
+    <ellipse cx="8" cy="55" rx="14" ry="2" fill="#D4AF37" opacity="0.4"/>
+    <!-- Right pan -->
+    <path d="M65 12 Q55 52 50 55" fill="none" stroke="url(#brassGrad)" stroke-width="1"/>
+    <ellipse cx="62" cy="55" rx="18" ry="4" fill="url(#brassGrad)" stroke="#5A3315" stroke-width="0.3"/>
+    <ellipse cx="62" cy="55" rx="14" ry="2" fill="#D4AF37" opacity="0.4"/>
+    <!-- Small gold nugget on left pan -->
+    <ellipse cx="8" cy="53" rx="5" ry="3" fill="url(#goldShine)"/>
+    <!-- Center pointer -->
+    <polygon points="35,12 32,18 38,18" fill="#D4AF37"/>
+    <!-- Decorative base knob -->
+    <circle cx="35" cy="60" r="3" fill="url(#brassGrad)" stroke="#5A3315" stroke-width="0.2"/>
+  </g>
+
+  <!-- LEFT DECORATIVE BARREL -->
+  <g transform="translate(70, 770)" opacity="0.7">
+    <ellipse cx="0" cy="0" rx="16" ry="22" fill="#3D1F0D" stroke="#5A3315" stroke-width="0.6"/>
+    <ellipse cx="0" cy="-18" rx="16" ry="6" fill="#2C1608" stroke="#5A3315" stroke-width="0.4"/>
+    <ellipse cx="0" cy="18" rx="16" ry="6" fill="#2C1608" stroke="#5A3315" stroke-width="0.4"/>
+    <line x1="-8" y1="-18" x2="-8" y2="18" stroke="#5A3315" stroke-width="0.4"/>
+    <line x1="8" y1="-18" x2="8" y2="18" stroke="#5A3315" stroke-width="0.4"/>
+  </g>
+
+  <!-- LEFT GOLD SACK -->
+  <g transform="translate(190, 775)" opacity="0.7">
+    <ellipse cx="0" cy="0" rx="24" ry="18" fill="#5A3315"/>
+    <ellipse cx="0" cy="-6" rx="20" ry="12" fill="#3D1F0D"/>
+    <path d="M-14 -6 Q-8 -18 4 -14 Q12 -10 10 -6" fill="#3D1F0D" stroke="#2C1608" stroke-width="0.3"/>
+    <text x="0" y="4" text-anchor="middle" fill="#D4AF37" font-size="10" font-weight="bold">$</text>
+  </g>
+
+  <!-- LEFT GOLD BARS STACK -->
+  <g transform="translate(240, 790)" opacity="0.65">
+    <use href="#goldBar" x="0" y="0" width="30" height="14"/>
+    <use href="#goldBar" x="2" y="-10" width="30" height="14"/>
+    <use href="#goldBar" x="5" y="-20" width="30" height="14"/>
+    <use href="#goldBar" x="8" y="-30" width="30" height="14"/>
+  </g>
+
+  <!-- ==================== RIGHT: DESERT LANDSCAPE + WAGON WHEEL ==================== -->
+  <g opacity="0.6">
+    <!-- Desert sky gradient -->
+    <rect x="1570" y="300" width="350" height="480" fill="url(#sunsetGrad)"/>
+    <!-- Sun with defined rays -->
+    <circle cx="1740" cy="400" r="30" fill="#D4AF37" opacity="0.6"/>
+    <circle cx="1740" cy="400" r="50" fill="#FFB300" opacity="0.08" filter="url(#strongBloom)"/>
+    <!-- Sun rays -->
+    <g opacity="0.15" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round">
+      <line x1="1740" y1="360" x2="1740" y2="340"/>
+      <line x1="1740" y1="440" x2="1740" y2="460"/>
+      <line x1="1700" y1="400" x2="1680" y2="400"/>
+      <line x1="1780" y1="400" x2="1800" y2="400"/>
+      <line x1="1712" y1="372" x2="1698" y2="358"/>
+      <line x1="1768" y1="372" x2="1782" y2="358"/>
+      <line x1="1712" y1="428" x2="1698" y2="442"/>
+      <line x1="1768" y1="428" x2="1782" y2="442"/>
+    </g>
+    <!-- Far mountain range (darkest, furthest) -->
+    <path d="M1570 530 L1600 480 L1640 510 L1680 460 L1720 500 L1760 470 L1800 510 L1840 490 L1880 520 L1920 500 L1920 620 L1570 620 Z" fill="#0D0602" opacity="0.4"/>
+    <!-- Mid mountain range -->
+    <path d="M1570 560 L1590 520 L1630 540 L1670 500 L1710 530 L1750 510 L1790 540 L1830 520 L1870 550 L1920 530 L1920 620 L1570 620 Z" fill="#2C1608" opacity="0.5"/>
+    <!-- Near desert ground -->
+    <path d="M1570 570 Q1640 555 1700 560 Q1800 550 1920 560 L1920 780 L1570 780 Z" fill="url(#desertGrad)"/>
+    <!-- Rock formations (3 depth layers) -->
+    <path d="M1620 565 L1645 495 L1670 565 Z" fill="#3D1F0D" opacity="0.7"/>
+    <path d="M1685 560 L1710 510 L1735 560 Z" fill="#5A3315" opacity="0.6"/>
+    <path d="M1740 555 L1760 515 L1780 555 Z" fill="#3D1F0D" opacity="0.5"/>
+    <!-- Cacti silhouettes -->
+    <g fill="#120700" opacity="0.55">
+      <rect x="1790" y="510" width="4" height="55" rx="1.5"/>
+      <rect x="1786" y="520" width="12" height="3" rx="1"/>
+      <rect x="1786" y="535" width="12" height="3" rx="1"/>
+      <rect x="1840" y="490" width="3" height="70" rx="1.5"/>
+      <rect x="1836" y="500" width="10" height="2.5" rx="1"/>
+      <rect x="1836" y="525" width="10" height="2.5" rx="1"/>
+      <rect x="1880" y="520" width="3" height="50" rx="1.5"/>
+      <rect x="1876" y="530" width="10" height="2.5" rx="1"/>
+    </g>
+    <!-- Windmill -->
+    <g transform="translate(1710, 430)" opacity="0.4">
+      <rect x="-2" y="0" width="4" height="45" fill="#0D0602"/>
+      <polygon points="-14,12 0,-3 14,12 0,27" fill="#0D0602">
+        <animateTransform attributeName="transform" type="rotate" from="0 0 12" to="360 0 12" dur="10s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+    <!-- Tumbleweed silhouette -->
+    <g transform="translate(1880, 600)" opacity="0.25">
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#120700" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="6" fill="none" stroke="#120700" stroke-width="1"/>
+      <circle cx="0" cy="0" r="3" fill="none" stroke="#120700" stroke-width="0.5"/>
+      <line x1="-10" y1="0" x2="10" y2="0" stroke="#120700" stroke-width="0.8"/>
+      <line x1="0" y1="-10" x2="0" y2="10" stroke="#120700" stroke-width="0.8"/>
+      <line x1="-7" y1="-7" x2="7" y2="7" stroke="#120700" stroke-width="0.5"/>
+      <line x1="7" y1="-7" x2="-7" y2="7" stroke="#120700" stroke-width="0.5"/>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT: LEDGER + GOLD BARS (replaces slot machine + JACKPOT) ==================== -->
+  <g opacity="0.8">
+    <!-- Wooden counter surface -->
+    <rect x="1680" y="510" width="160" height="8" rx="2" fill="#3D1F0D" stroke="#5A3315" stroke-width="0.5"/>
+    <rect x="1680" y="518" width="160" height="4" fill="#2C1608"/>
+
+    <!-- OPEN LEDGER BOOK -->
+    <g transform="translate(1700, 420)">
+      <!-- Left page -->
+      <rect x="0" y="0" width="30" height="40" rx="1" fill="#D4C9A0" stroke="#8B5A2B" stroke-width="0.3"/>
+      <!-- Right page -->
+      <rect x="30" y="0" width="30" height="40" rx="1" fill="#C8BDA0" stroke="#8B5A2B" stroke-width="0.3"/>
+      <!-- Spine -->
+      <line x1="30" y1="0" x2="30" y2="40" stroke="#5A3315" stroke-width="0.6"/>
+      <!-- Lines on left page -->
+      <line x1="3" y1="8" x2="27" y2="8" stroke="#8B5A2B" stroke-width="0.2" opacity="0.5"/>
+      <line x1="3" y1="14" x2="25" y2="14" stroke="#8B5A2B" stroke-width="0.2" opacity="0.5"/>
+      <line x1="3" y1="20" x2="26" y2="20" stroke="#8B5A2B" stroke-width="0.2" opacity="0.5"/>
+      <line x1="3" y1="26" x2="24" y2="26" stroke="#8B5A2B" stroke-width="0.2" opacity="0.5"/>
+      <line x1="3" y1="32" x2="27" y2="32" stroke="#8B5A2B" stroke-width="0.2" opacity="0.5"/>
+      <!-- Lines on right page -->
+      <line x1="33" y1="8" x2="57" y2="8" stroke="#8B5A2B" stroke-width="0.2" opacity="0.5"/>
+      <line x1="33" y1="14" x2="55" y2="14" stroke="#8B5A2B" stroke-width="0.2" opacity="0.5"/>
+      <line x1="33" y1="20" x2="56" y2="20" stroke="#8B5A2B" stroke-width="0.2" opacity="0.5"/>
+      <line x1="33" y1="26" x2="54" y2="26" stroke="#8B5A2B" stroke-width="0.2" opacity="0.5"/>
+      <line x1="33" y1="32" x2="57" y2="32" stroke="#8B5A2B" stroke-width="0.2" opacity="0.5"/>
+      <!-- Feather pen -->
+      <path d="M58 0 Q68 -10 70 -20 Q72 -15 68 -5 Q64 0 58 2" fill="#5A3315" stroke="#3D1F0D" stroke-width="0.3"/>
+      <line x1="58" y1="2" x2="55" y2="10" stroke="#2C1608" stroke-width="0.5"/>
+    </g>
+
+    <!-- RIGHT GOLD BARS STACK -->
+    <g transform="translate(1740, 490)">
+      <use href="#goldBar" x="0" y="0" width="35" height="16"/>
+      <use href="#goldBar" x="3" y="-12" width="35" height="16"/>
+      <use href="#goldBar" x="6" y="-24" width="35" height="16"/>
+      <use href="#goldBar" x="9" y="-36" width="35" height="16"/>
+    </g>
+  </g>
+
+  <!-- RIGHT GOLD CHEST -->
+  <g transform="translate(1840, 760)" opacity="0.55">
+    <rect x="0" y="10" width="50" height="25" rx="3" fill="url(#brassGrad)"/>
+    <path d="M3 14 Q25 -2 47 14" fill="url(#goldShine)"/>
+    <rect x="22" y="20" width="6" height="10" rx="1" fill="#0D0602"/>
+    <rect x="5" y="6" width="40" height="3" rx="1.5" fill="#D4AF37"/>
+  </g>
+
+  <!-- WAGON WHEEL (partial, bottom-right corner) -->
+  <g transform="translate(1895, 880)" opacity="0.35">
+    <!-- Outer rim -->
+    <circle cx="0" cy="0" r="55" fill="none" stroke="#3D1F0D" stroke-width="4"/>
+    <!-- Iron rim -->
+    <circle cx="0" cy="0" r="57" fill="none" stroke="#5A3315" stroke-width="2"/>
+    <circle cx="0" cy="0" r="59" fill="none" stroke="#2C1608" stroke-width="1"/>
+    <!-- Hub -->
+    <circle cx="0" cy="0" r="8" fill="#3D1F0D" stroke="#5A3315" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="3" fill="#2C1608"/>
+    <!-- Spokes -->
+    <line x1="0" y1="-8" x2="0" y2="-55" stroke="#3D1F0D" stroke-width="2.5"/>
+    <line x1="0" y1="8" x2="0" y2="55" stroke="#3D1F0D" stroke-width="2.5"/>
+    <line x1="-8" y1="0" x2="-55" y2="0" stroke="#3D1F0D" stroke-width="2.5"/>
+    <line x1="8" y1="0" x2="55" y2="0" stroke="#3D1F0D" stroke-width="2.5"/>
+    <line x1="-6" y1="-6" x2="-39" y2="-39" stroke="#3D1F0D" stroke-width="2"/>
+    <line x1="6" y1="6" x2="39" y2="39" stroke="#3D1F0D" stroke-width="2"/>
+    <line x1="6" y1="-6" x2="39" y2="-39" stroke="#3D1F0D" stroke-width="2"/>
+    <line x1="-6" y1="6" x2="-39" y2="39" stroke="#3D1F0D" stroke-width="2"/>
+    <!-- Clips on rim -->
+    <rect x="-2" y="-58" width="4" height="6" rx="1" fill="#5A3315"/>
+    <rect x="-2" y="52" width="4" height="6" rx="1" fill="#5A3315"/>
+    <rect x="-58" y="-2" width="6" height="4" rx="1" fill="#5A3315"/>
+    <rect x="52" y="-2" width="6" height="4" rx="1" fill="#5A3315"/>
+  </g>
+
+  <!-- ==================== COINS (CONFINED TO EDGES) ==================== -->
+  <g>
+    <use href="#coin" x="40" y="-40" class="coin1"/>
+    <use href="#coin" x="160" y="-60" class="coin2"/>
+    <use href="#coin" x="250" y="-30" class="coin3"/>
+    <use href="#coin" x="1820" y="-50" class="coin1"/>
+    <use href="#coin" x="1860" y="-30" class="coin2"/>
+    <use href="#coin" x="1750" y="-70" class="coin3"/>
+    <use href="#coin" x="320" y="-20" class="coin1" style="animation-delay:-8s"/>
+    <use href="#coin" x="1650" y="-40" class="coin2" style="animation-delay:-10s"/>
+  </g>
+
+  <!-- FLOOR SPARSE COINS -->
+  <g opacity="0.35">
+    <use href="#coin" x="90" y="810" width="18" height="18"/>
+    <use href="#coin" x="300" y="830" width="16" height="16" transform="rotate(-20 308 838)"/>
+    <use href="#coin" x="1580" y="820" width="17" height="17" transform="rotate(15 1588 828)"/>
+    <use href="#coin" x="1750" y="835" width="15" height="15" transform="rotate(-10 1757 842)"/>
+    <use href="#coin" x="1850" y="815" width="18" height="18"/>
+  </g>
+
+  <!-- ==================== PARTICLES (VERY SUBTLE) ==================== -->
+  <g>
+    <use href="#dust" x="500" y="450" class="dust1"/>
+    <use href="#dust" x="700" y="350" class="dust2"/>
+    <use href="#dust" x="900" y="500" class="dust1" style="animation-delay:-5s"/>
+    <use href="#dust" x="1100" y="400" class="dust2" style="animation-delay:-7s"/>
+    <use href="#dust" x="1300" y="480" class="dust1" style="animation-delay:-10s"/>
+    <use href="#dust" x="800" y="600" class="dust2" style="animation-delay:-12s"/>
+    <use href="#dust" x="1200" y="350" class="dust1" style="animation-delay:-3s"/>
+    <use href="#dust" x="600" y="550" class="dust2" style="animation-delay:-15s"/>
+    <use href="#dust" x="1000" y="650" class="dust1" style="animation-delay:-8s"/>
+    <use href="#dust" x="1400" y="420" class="dust2" style="animation-delay:-6s"/>
+
+    <use href="#spark" x="700" y="500" class="spark1"/>
+    <use href="#spark" x="1100" y="450" class="spark1" style="animation-delay:-5s"/>
+    <use href="#spark" x="900" y="380" class="spark1" style="animation-delay:-9s"/>
+    <use href="#spark" x="1300" y="550" class="spark1" style="animation-delay:-3s"/>
+    <use href="#spark" x="600" y="420" class="spark1" style="animation-delay:-12s"/>
+  </g>
+
+  <!-- ==================== VIGNETTE ==================== -->
+  <rect x="0" y="0" width="1920" height="1080" fill="none" stroke="#120700" stroke-width="50" opacity="0.5" pointer-events="none"/>
+  <rect x="0" y="0" width="1920" height="1080" fill="none" stroke="#0D0602" stroke-width="100" opacity="0.35" pointer-events="none"/>
+
+</svg>
